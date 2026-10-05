@@ -1,3 +1,302 @@
+# The Site Configuration
+
+# Import the theme
 theme: jekyll-theme-chirpy
-title: Tope Taiwo's homepage
-description: Bookmark this to keep an eye on my project updates!
+
+# ----------------------------------------------------------
+# Site
+# ----------------------------------------------------------
+
+lang: en
+timezone: Africa/Lagos
+
+title: "Tope Taiwo"
+
+tagline: "Full-Stack Software Engineer"
+
+description: >-
+  Tope Taiwo is a full-stack software engineer specializing in
+  TypeScript, Node.js, React, Next.js, PostgreSQL,
+  distributed backend systems, and production software architecture.
+
+url: "https://topzyray.github.io"
+
+baseurl: ""
+
+# ----------------------------------------------------------
+# GitHub
+# ----------------------------------------------------------
+
+github:
+  username: topzyray
+
+# ----------------------------------------------------------
+# Twitter / X
+# ----------------------------------------------------------
+
+twitter:
+  username: taiwotopesunday
+
+# ----------------------------------------------------------
+# Social
+# ----------------------------------------------------------
+
+social:
+  name: "Tope Taiwo"
+  email: "taiwo.tope@proton.me"
+  fediverse_handle:
+
+  links:
+    - "https://twitter.com/taiwotopesunday"
+    - "https://github.com/topzyray"
+    - "https://www.linkedin.com/in/taiwotopesunday"
+
+# ----------------------------------------------------------
+# Site Verification
+# ----------------------------------------------------------
+
+webmaster_verifications:
+  google:
+  bing:
+  alexa:
+  yandex:
+  baidu:
+  facebook:
+
+# ----------------------------------------------------------
+# Analytics
+# ----------------------------------------------------------
+
+analytics:
+  google:
+    id:
+
+  goatcounter:
+    id:
+
+  umami:
+    id:
+    domain:
+
+  matomo:
+    id:
+    domain:
+
+  cloudflare:
+    id:
+
+  fathom:
+    id:
+
+# ----------------------------------------------------------
+# Page Views
+# ----------------------------------------------------------
+
+pageviews:
+  provider:
+
+# ----------------------------------------------------------
+# Theme
+# ----------------------------------------------------------
+
+theme_mode:
+
+# ----------------------------------------------------------
+# Media
+# ----------------------------------------------------------
+
+cdn:
+
+avatar: "/assets/img/avatar.png"
+
+social_preview_image: "/assets/img/profile.png"
+
+# ----------------------------------------------------------
+# Table of Contents
+# ----------------------------------------------------------
+
+toc: true
+
+# ----------------------------------------------------------
+# Actions
+# ----------------------------------------------------------
+
+actions:
+  edit_post:
+    enabled: false
+    url: ""
+    static_url: false
+
+# ----------------------------------------------------------
+# Comments
+# ----------------------------------------------------------
+
+comments:
+  provider:
+
+  disqus:
+    shortname:
+
+  utterances:
+    repo:
+    issue_term:
+
+  giscus:
+    repo:
+    repo_id:
+    category:
+    category_id:
+    mapping:
+    strict:
+    input_position:
+    lang:
+    reactions_enabled:
+
+# ----------------------------------------------------------
+# Self-hosted Assets
+# ----------------------------------------------------------
+
+assets:
+  self_host:
+    enabled:
+    env:
+
+# ----------------------------------------------------------
+# PWA
+# ----------------------------------------------------------
+
+pwa:
+  enabled: true
+
+  cache:
+    enabled: true
+
+    deny_paths:
+      # - "/example"
+
+# ----------------------------------------------------------
+# Pagination
+# ----------------------------------------------------------
+
+paginate: 10
+
+# ----------------------------------------------------------
+# Base URL
+# ----------------------------------------------------------
+
+# The base URL of your site
+baseurl: ""
+
+# ==========================================================
+# The following options are not recommended to be modified
+# ==========================================================
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+
+  syntax_highlighter: rouge
+
+  syntax_highlighter_opts:
+    css_class: highlight
+
+    span:
+      line_numbers: false
+
+    block:
+      line_numbers: true
+      start_line: 1
+
+# ----------------------------------------------------------
+# Collections
+# ----------------------------------------------------------
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+# ----------------------------------------------------------
+# Defaults
+# ----------------------------------------------------------
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+
+    values:
+      layout: post
+      comments: false
+      toc: true
+
+      # Do not change this permalink unless you are prepared
+      # to update existing post links.
+      permalink: /posts/:title/
+
+  - scope:
+      path: _drafts
+
+    values:
+      comments: false
+
+  - scope:
+      path: ""
+      type: tabs
+
+    values:
+      layout: page
+      permalink: /:title/
+
+# ----------------------------------------------------------
+# Sass
+# ----------------------------------------------------------
+
+sass:
+  style: compressed
+
+# ----------------------------------------------------------
+# HTML Compression
+# ----------------------------------------------------------
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+
+  ignore:
+    envs:
+      - development
+
+# ----------------------------------------------------------
+# Jekyll Archives
+# ----------------------------------------------------------
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+
+  layouts:
+    category: category
+    tag: tag
+
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
+
+# ----------------------------------------------------------
+# Exclude
+# ----------------------------------------------------------
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
