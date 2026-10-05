@@ -4,7 +4,7 @@ icon: fas fa-code
 order: 2
 ---
 
-# Projects
+# Recent Projects
 
 A selection of software systems and products I have worked on.
 
