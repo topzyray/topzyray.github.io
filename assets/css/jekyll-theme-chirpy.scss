@@ -163,7 +163,9 @@
   border: 1px solid var(--card-border-color, rgba(128, 128, 128, 0.25));
   border-radius: 0.9rem;
   background: var(--card-bg, rgba(128, 128, 128, 0.035));
-  transition: border-color 160ms ease, transform 160ms ease;
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease;
 
   &:hover {
     border-color: var(--link-color);

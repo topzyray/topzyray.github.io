@@ -5,8 +5,6 @@ order: 1
 description: About Tope Taiwo, a full-stack software engineer focused on backend systems, TypeScript, and maintainable production software.
 ---
 
-# About Me
-
 I’m **Tope Taiwo**, a full-stack software engineer with a backend focus. I build applications and services with TypeScript and Node.js, and work across the surrounding web, data, and infrastructure layers.
 
 My experience includes modular backend systems, APIs, authentication and authorization, multi-tenant products, asynchronous workflows, and relational data. I enjoy work where reliability and maintainability matter alongside delivery.
