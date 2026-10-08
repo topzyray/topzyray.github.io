@@ -2,7 +2,12 @@
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
   <header class="profile-wrapper">
-    <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
+    <!-- class="rounded-circle" -->
+    <a
+      href="{{ '/' | relative_url }}"
+      id="avatar"
+      class="rounded-3"
+    >
       {%- if site.avatar != empty and site.avatar -%}
         {%- capture avatar_url -%}
           {% include media-url.html src=site.avatar %}
