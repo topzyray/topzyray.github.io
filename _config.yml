@@ -132,14 +132,14 @@ actions:
 # ----------------------------------------------------------
 
 comments:
-  provider:
+  provider: dual
 
   disqus:
-    shortname:
+    shortname: "topzyray"
 
   utterances:
-    repo:
-    issue_term:
+    repo: topzyray/topzyray.github.io
+    issue_term: pathname
 
   giscus:
     repo:
@@ -226,7 +226,7 @@ defaults:
 
     values:
       layout: post
-      comments: false
+      comments: true
       toc: true
 
       # Do not change this permalink unless you are prepared

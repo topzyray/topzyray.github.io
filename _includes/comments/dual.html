@@ -1,0 +1,26 @@
+<section
+  id="post-comments"
+  class="mt-5"
+  aria-labelledby="post-comments-heading"
+  data-utterances-repo="{{ site.comments.utterances.repo | escape }}"
+  data-utterances-issue-term="{{ site.comments.utterances.issue_term | default: 'pathname' | escape }}"
+  data-disqus-shortname="{{ site.comments.disqus.shortname | escape }}"
+>
+  <h2 id="post-comments-heading">Comments and reactions</h2>
+
+  <section class="mt-4" aria-labelledby="github-comments-heading">
+    <h3 id="github-comments-heading">GitHub comments and reactions</h3>
+    <div id="github-comments"></div>
+  </section>
+
+  <section class="mt-4" aria-labelledby="guest-comments-heading">
+    <h3 id="guest-comments-heading">Guest comments</h3>
+    <div id="guest-comments">
+      {% if site.comments.disqus.shortname == empty %}
+        <p class="text-muted">
+          Guest comments will be available after the Disqus shortname is configured.
+        </p>
+      {% endif %}
+    </div>
+  </section>
+</section>
