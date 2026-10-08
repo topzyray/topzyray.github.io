@@ -1,5 +1,4 @@
 ---
-
 title: "What Building Production Backends Taught Me About Architecture"
 date: 2026-10-07 08:00:00 +0100
 categories:
@@ -13,7 +12,6 @@ categories:
 * architecture
 * clean architecture
 * domain driven design
-
 ---
 
 In my previous post, I wrote about building production backends with NestJS.
