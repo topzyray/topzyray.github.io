@@ -2,72 +2,26 @@
 title: About
 icon: fas fa-user
 order: 1
+description: About Tope Taiwo, a full-stack software engineer focused on backend systems, TypeScript, and maintainable production software.
 ---
 
 # About Me
 
-I'm **Tope Taiwo**, a full-stack software engineer focused on building reliable, maintainable and scalable software systems.
+I’m **Tope Taiwo**, a full-stack software engineer with a backend focus. I build applications and services with TypeScript and Node.js, and work across the surrounding web, data, and infrastructure layers.
 
-My primary engineering focus is the **TypeScript ecosystem**, particularly:
+My experience includes modular backend systems, APIs, authentication and authorization, multi-tenant products, asynchronous workflows, and relational data. I enjoy work where reliability and maintainability matter alongside delivery.
 
-- Node.js
-- NestJS
-- Express.js
-- React
-- Next.js
-- React Native
-- PostgreSQL
-- MongoDB
-- Redis
-- Docker
-- Cloud infrastructure
-- Distributed systems
-- REST APIs
-- Event-driven architectures
+## How I work
 
-I enjoy working on systems where architecture, reliability, security and maintainability matter as much as getting the feature working.
+- Organize code around product and business capabilities.
+- Keep application behavior testable and infrastructure details behind useful boundaries.
+- Favor simple designs that can evolve as requirements become clearer.
+- Treat security, observability, and operational reliability as part of the engineering work.
 
-## Engineering interests
+## Technologies
 
-My current areas of interest include:
+TypeScript · Node.js · NestJS · Express.js · PostgreSQL · Prisma · Redis · React · Next.js · React Native · Docker · Azure · AWS
 
-- Backend engineering
-- Distributed systems
-- Software architecture
-- Domain-driven design
-- Event-driven systems
-- Authentication and authorization
-- API design
-- Database architecture
-- Cloud infrastructure
-- DevOps
-- Application security
-- Artificial intelligence
-- Cybersecurity
+## Beyond the résumé
 
-## Engineering philosophy
-
-I prefer systems that are:
-
-1. **Simple enough to understand**
-2. **Modular enough to evolve**
-3. **Reliable enough for production**
-4. **Secure by design**
-5. **Observable**
-6. **Testable**
-7. **Replaceable at infrastructure boundaries**
-
-I particularly value architectures where business logic does not become tightly coupled to a particular database, queue, email provider, cloud provider or third-party service.
-
-## What you'll find here
-
-This site is where I document:
-
-- Engineering lessons
-- Architecture decisions
-- Backend development
-- TypeScript and Node.js
-- Software projects
-- Infrastructure experiments
-- Technical research
-- Lessons learned from building production systems
+I write about engineering decisions and lessons from building software on the [blog]({{ '/' | relative_url }}). You can also browse [selected projects]({{ '/projects/' | relative_url }}) or [contact me](mailto:{{ site.social.email }}).

@@ -1,0 +1,100 @@
+---
+layout: default
+---
+
+{% include lang.html %}
+
+<div class="flex-grow-1 px-xl-1">
+  <section class="mb-5" aria-labelledby="portfolio-title">
+    <p class="text-uppercase small fw-bold text-muted mb-2">Backend-focused software engineer</p>
+    <h1 id="portfolio-title">I build reliable software that can evolve.</h1>
+    <p class="lead">I’m Tope Taiwo, a full-stack engineer focused on backend systems, APIs, and production applications with TypeScript, Node.js, PostgreSQL, and cloud technologies.</p>
+    <p>I work across architecture and implementation, with an emphasis on clear boundaries, maintainability, and solving practical product problems.</p>
+    <p class="d-flex flex-wrap gap-2">
+      <a class="btn btn-primary" href="{{ '/projects/' | relative_url }}">Explore selected work</a>
+      <a class="btn btn-outline-primary" href="{{ '/resume/' | relative_url }}">View résumé</a>
+      <a class="btn btn-outline-secondary" href="mailto:{{ site.social.email }}?subject=Hiring%20inquiry%20%E2%80%94%20Tope%20Taiwo">Hire Me</a>
+    </p>
+  </section>
+
+  <hr>
+
+  <section class="mb-4" aria-labelledby="writing-title">
+    <h2 id="writing-title">Recent writing</h2>
+    <p>Notes on backend engineering, architecture, and lessons from building software.</p>
+  </section>
+
+  {% assign all_pinned = site.posts | where: 'pin', 'true' %}
+  {% assign all_normal = site.posts | where_exp: 'item', 'item.pin != true and item.hidden != true' %}
+  {% assign posts = '' | split: '' %}
+  {% assign visible_start = paginator.page | minus: 1 | times: paginator.per_page %}
+  {% assign visible_end = visible_start | plus: paginator.per_page %}
+
+  {% if all_pinned.size > visible_start %}
+    {% if all_pinned.size > visible_end %}
+      {% assign pinned_size = paginator.per_page %}
+    {% else %}
+      {% assign pinned_size = all_pinned.size | minus: visible_start %}
+    {% endif %}
+    {% for i in (visible_start..all_pinned.size) limit: pinned_size %}
+      {% assign posts = posts | push: all_pinned[i] %}
+    {% endfor %}
+  {% else %}
+    {% assign pinned_size = 0 %}
+  {% endif %}
+
+  {% assign normal_size = paginator.posts | size | minus: pinned_size %}
+  {% if normal_size > 0 %}
+    {% if pinned_size > 0 %}
+      {% assign normal_start = 0 %}
+    {% else %}
+      {% assign normal_start = visible_start | minus: all_pinned.size %}
+    {% endif %}
+    {% assign normal_end = normal_start | plus: normal_size | minus: 1 %}
+    {% for i in (normal_start..normal_end) %}
+      {% assign posts = posts | push: all_normal[i] %}
+    {% endfor %}
+  {% endif %}
+
+  <div id="post-list">
+    {% for post in posts %}
+      <article class="card-wrapper card">
+        <a href="{{ post.url | relative_url }}" class="post-preview row g-0 flex-md-row-reverse">
+          {% assign card_body_col = '12' %}
+          {% if post.image %}
+            {% assign src = post.image.path | default: post.image %}
+            {% if post.media_subpath %}
+              {% unless src contains '://' %}
+                {% assign src = post.media_subpath | append: '/' | append: src | replace: '///', '/' | replace: '//', '/' %}
+              {% endunless %}
+            {% endif %}
+            {% assign alt = post.image.alt | xml_escape | default: 'Preview Image' %}
+            <div class="col-md-5"><img src="{{ src }}" alt="{{ alt }}"></div>
+            {% assign card_body_col = '7' %}
+          {% endif %}
+          <div class="col-md-{{ card_body_col }}">
+            <div class="card-body d-flex flex-column">
+              <h2 class="card-title my-2 mt-md-0">{{ post.title }}</h2>
+              <div class="card-text content mt-0 mb-3"><p>{% include post-summary.html %}</p></div>
+              <div class="post-meta flex-grow-1 d-flex align-items-end">
+                <div class="me-auto">
+                  <i class="far fa-calendar fa-fw me-1" aria-hidden="true"></i>
+                  {% include datetime.html date=post.date lang=lang %}
+                  {% if post.categories.size > 0 %}
+                    <i class="far fa-folder-open fa-fw me-1" aria-hidden="true"></i>
+                    <span class="categories">{% for category in post.categories %}{{ category }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+                  {% endif %}
+                </div>
+                {% if post.pin %}<span class="pin ms-1"><i class="fas fa-thumbtack fa-fw" aria-hidden="true"></i> Pinned</span>{% endif %}
+              </div>
+            </div>
+          </div>
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+
+  {% if paginator.total_pages > 1 %}
+    {% include post-paginator.html %}
+  {% endif %}
+</div>

@@ -119,9 +119,9 @@ Moderation decisions may be made without prior notice.
 
 ## 9. Disqus
 
-This website uses **Disqus** to provide its commenting functionality.
+This website may provide comments through **Utterances** (which stores discussions as GitHub issues) and **Disqus** (which provides guest commenting when enabled). These are third-party services with their own terms and privacy practices. Avoid submitting sensitive personal information in comments, and review the relevant service policies before participating.
 
-When you participate in discussions through Disqus, your interaction with the commenting service is also subject to Disqus's own terms, privacy practices, and policies.
+When you participate in discussions through either service, your interaction is also subject to that service's own terms, privacy practices, and policies.
 
 Please review Disqus's policies before submitting a comment if you have concerns about how your information or comments are handled by the service.
 
