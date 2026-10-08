@@ -15,7 +15,8 @@
   const listenButton = document.createElement("button");
   listenButton.type = "button";
   // listenButton.className = "btn btn-outline-primary btn-sm";
-  listenButton.className = "btn btn-outline-primary btn-sm post-audio-listen";
+  listenButton.className =
+    "btn btn-outline-primary btn-sm post-audio-listen ml-2";
   listenButton.textContent = "Listen to this post";
 
   const stopButton = document.createElement("button");
