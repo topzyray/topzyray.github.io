@@ -2,18 +2,17 @@
 title: "Designing Backends So Infrastructure Can Change Without Rewriting Business Logic"
 date: 2026-10-08 08:00:00 +0100
 categories:
-
-* Backend Engineering
-* Architecture
-  tags:
-* nodejs
-* typescript
-* architecture
-* clean architecture
-* dependency inversion
-* postgresql
-* redis
-* messaging
+  - Backend Engineering
+  - Architecture
+tags:
+  - nodejs
+  - typescript
+  - architecture
+  - clean architecture
+  - dependency inversion
+  - postgresql
+  - redis
+  - messaging
 ---
 
 Yesterday, I wrote about what building production backends has taught me about architecture.
