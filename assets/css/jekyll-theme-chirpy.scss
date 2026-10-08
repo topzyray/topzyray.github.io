@@ -1,0 +1,28 @@
+---
+---
+
+@use "main";
+
+.post-audio-controls {
+  .btn {
+    --bs-btn-border-radius: 0.6rem;
+  }
+
+  .post-audio-listen {
+    --bs-btn-color: var(--link-color);
+    --bs-btn-border-color: var(--link-color);
+
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--link-color);
+    --bs-btn-hover-border-color: var(--link-color);
+  }
+
+  .post-audio-stop {
+    --bs-btn-color: var(--text-muted-color);
+    --bs-btn-border-color: var(--text-muted-color);
+
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--text-muted-color);
+    --bs-btn-hover-border-color: var(--text-muted-color);
+  }
+}
