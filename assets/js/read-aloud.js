@@ -6,22 +6,18 @@
   }
 
   const controls = document.createElement("div");
-  // controls.className =
-  //   "d-flex flex-wrap align-items-center gap-2 mb-4 mt-2 post-audio-listen";
 
   controls.className =
     "post-audio-controls d-flex flex-wrap align-items-center gap-2 mb-4 mt-2";
 
   const listenButton = document.createElement("button");
   listenButton.type = "button";
-  // listenButton.className = "btn btn-outline-primary btn-sm";
   listenButton.className =
     "btn btn-outline-primary btn-sm post-audio-listen ml-2";
   listenButton.textContent = "Listen to this post";
 
   const stopButton = document.createElement("button");
   stopButton.type = "button";
-  // stopButton.className = "btn btn-outline-secondary btn-sm post-audio-stop";
   stopButton.className = "btn btn-outline-secondary btn-sm post-audio-stop";
   stopButton.textContent = "Stop";
   stopButton.hidden = true;
