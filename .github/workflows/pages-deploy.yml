@@ -12,6 +12,9 @@ on:
 
   workflow_dispatch:
 
+  schedule:
+    - cron: "5 7 * * *"
+
 permissions:
   contents: read
   pages: write
@@ -43,6 +46,9 @@ jobs:
         with:
           ruby-version: 3.4
           bundler-cache: true
+
+      - name: Validate post front matter
+        run: bundle exec ruby script/validate_posts.rb
 
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
