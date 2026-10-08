@@ -11,9 +11,9 @@ tags:
   - architecture
 ---
 
-NestJS provides a structured framework for building Node.js applications, but the framework alone does not determine whether an application will be maintainable in production.
+My focus for this month of October will be on NestJS framework and how it has imparted my development experience as a fullstack software engineer. NestJS provides a structured framework for building Node.js applications, but the framework alone does not determine whether an application will be maintainable in production.
 
-The architecture surrounding the framework matters.
+The architecture surrounding the framework matters a lot. I will be sharing overview on my opinions when developing a secure and scalable systems in NestJS.
 
 ## Feature-oriented modules
 
