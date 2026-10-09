@@ -13,8 +13,8 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: "5 7 * * *"
-
+    - cron: "17 7 * * *"
+      timezone: Africa/Lagos
 permissions:
   contents: read
   pages: write
