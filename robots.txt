@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://topzyray.github.io/sitemap.xml

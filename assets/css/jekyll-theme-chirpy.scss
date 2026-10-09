@@ -3,6 +3,10 @@
 
 @use "main.bundle";
 
+.home-actions {
+  gap: 0.5rem;
+}
+
 .resume-page {
   max-width: 920px;
 }
