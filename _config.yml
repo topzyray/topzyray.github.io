@@ -23,6 +23,10 @@ url: "https://topzyray.github.io"
 
 baseurl: ""
 
+plugins:
+  - jekyll-feed
+  # (other plugins like jekyll-sitemap, etc.)
+
 # ----------------------------------------------------------
 # GitHub
 # ----------------------------------------------------------
