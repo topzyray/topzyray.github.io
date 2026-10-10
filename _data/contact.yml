@@ -1,3 +1,8 @@
+- type: rss
+  icon: "fas fa-rss"
+  noblank: true
+  url: "/rss.xml"
+
 - type: github
   icon: "fab fa-github"
   noblank: true
