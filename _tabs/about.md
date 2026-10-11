@@ -2,24 +2,30 @@
 title: About
 icon: fas fa-user
 order: 1
-description: About Tope Taiwo, a full-stack software engineer focused on backend systems, TypeScript, and maintainable production software.
+description: About Tope Taiwo, a fullstack software engineer with 4+ years of experience building web, mobile, and cloud-native applications.
 ---
 
-I’m **Tope Taiwo**, a full-stack software engineer with a backend focus. I build applications and services with TypeScript and Node.js, and work across the surrounding web, data, and infrastructure layers.
+I’m **Tope Taiwo**, a fullstack software engineer with **4+ years of experience** designing, delivering, and scaling production-grade web, mobile, and cloud-native applications. I work across product architecture, APIs, user experiences, data, and cloud infrastructure.
 
-My experience includes modular backend systems, APIs, authentication and authorization, multi-tenant products, asynchronous workflows, and relational data. I enjoy work where reliability and maintainability matter alongside delivery.
+I’ve architected scalable APIs, distributed systems, event-driven microservices, multi-tenant platforms, and secure authentication systems. Across education, logistics, e-commerce, and discovery products, I translate business requirements into practical software and work with stakeholders and cross-functional teams to deliver it end to end.
 
 ## How I work
 
-- Organize code around product and business capabilities.
-- Keep application behavior testable and infrastructure details behind useful boundaries.
-- Favor simple designs that can evolve as requirements become clearer.
-- Treat security, observability, and operational reliability as part of the engineering work.
+- Lead technical decisions and product architecture with delivery goals in mind.
+- Use modular design, domain-driven design, and event-driven architecture where they fit.
+- Build secure systems with authentication, RBAC, ABAC, validation, and automated tests.
+- Collaborate across engineering and product teams, keeping maintainability and reliability part of delivery.
 
 ## Technologies
 
-TypeScript · Node.js · NestJS · Express.js · PostgreSQL · Prisma · Redis · React · Next.js · React Native · Docker · Azure · AWS
+- **Languages:** JavaScript (ES6+), TypeScript, Python
+- **Currently learning:** Go/Golang
+- **Backend:** NestJS, Express, FastAPI, RESTful APIs, WebSockets
+- **Data:** PostgreSQL, MySQL, MongoDB, Redis
+- **Frontend:** React, React Native, Expo, Next.js, Redux, Zustand, Tailwind CSS, Nativewind
+- **Cloud and DevOps:** Azure, AWS, Docker, GitHub Actions
+- **Architecture and quality:** Microservices, modular monoliths, clean architecture, event-driven architecture, domain-driven design, RBAC, ABAC, Jest, unit, integration and E2E testing, TDD
 
 ## Beyond the résumé
 
-I write about engineering decisions and lessons from building software on the [blog]({{ '/' | relative_url }}). You can also browse [selected projects]({{ '/projects/' | relative_url }}) or [contact me](mailto:{{ site.social.email }}).
+I’ve mentored early-career engineers and contributed to developer and security communities. I write about backend engineering, system architecture, TypeScript, and software engineering on my [blog]({{ '/' | relative_url }}), [Dev.to](https://dev.to/topzyray), and [Medium](https://medium.com/@topzyray). Explore [selected projects]({{ '/projects/' | relative_url }}), [my résumé]({{ '/resume/' | relative_url }}), or [contact me](mailto:{{ site.social.email }}).

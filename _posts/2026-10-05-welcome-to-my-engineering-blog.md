@@ -26,7 +26,7 @@ The primary focus will be software engineering, particularly:
 - Node.js
 - NestJS
 - Express.js
-- Go/Golang
+- Go/Golang (currently learning)
 - React
 - Next.js
 - PostgreSQL
