@@ -27,6 +27,7 @@ front matter. Keep `categories` and `tags` as separate, indented lists:
 ---
 title: "Post title"
 date: 2026-10-09 08:00:00 +0100
+description: "A concise summary for search results, social previews, and the post listing."
 categories:
   - Backend Engineering
 tags:
@@ -34,6 +35,11 @@ tags:
   - architecture
 ---
 ```
+
+Give each post a specific, reader-focused `description`; it is used as the
+post summary and search/social preview text. Chirpy also displays estimated
+reading time on post pages and in the recent-writing list. Page views are
+provided by GoatCounter when its site ID is configured in `_config.yml`.
 
 The deployment workflow validates post titles, dates, categories, and tags
 before building the site. Jekyll excludes posts dated in the future and keeps

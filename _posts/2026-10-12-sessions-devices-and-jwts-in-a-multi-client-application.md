@@ -1,6 +1,7 @@
 ---
 title: "Sessions, Devices and JWTs in a Multi-Client Application"
 date: 2026-10-12 08:00:00 +0100
+description: "Design production session management for JWT applications, including device tracking, session revocation, and web and mobile clients."
 categories:
   - Backend Engineering
   - Security

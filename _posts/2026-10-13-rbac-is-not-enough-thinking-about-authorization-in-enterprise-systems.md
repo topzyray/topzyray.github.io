@@ -1,6 +1,7 @@
 ---
 title: "RBAC Is Not Enough: Thinking About Authorization in Enterprise Systems"
 date: 2026-10-13 08:00:00 +0100
+description: "Understand where role-based access control falls short in enterprise systems and why authorization must consider organizational context."
 categories:
   - Backend Engineering
   - Security

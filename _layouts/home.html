@@ -80,6 +80,8 @@ layout: default
                 <div class="me-auto">
                   <i class="far fa-calendar fa-fw me-1" aria-hidden="true"></i>
                   {% include datetime.html date=post.date lang=lang %}
+                  <i class="far fa-clock fa-fw me-1" aria-hidden="true"></i>
+                  {% include read-time.html content=post.content prompt=true lang=lang %}
                   {% if post.categories.size > 0 %}
                     <i class="far fa-folder-open fa-fw me-1" aria-hidden="true"></i>
                     <span class="categories">{% for category in post.categories %}{{ category }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>

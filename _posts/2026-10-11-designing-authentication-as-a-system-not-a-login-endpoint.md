@@ -1,6 +1,7 @@
 ---
 title: "Designing Authentication as a System, Not a Login Endpoint"
 date: 2026-10-11 08:00:00 +0100
+description: "Design authentication beyond login by considering verification, recovery, revocation, multiple devices, and web and mobile clients."
 categories:
   - Backend Engineering
   - Security

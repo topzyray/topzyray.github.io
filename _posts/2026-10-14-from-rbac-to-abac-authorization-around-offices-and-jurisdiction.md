@@ -1,6 +1,7 @@
 ---
 title: "From RBAC to ABAC: Authorization Around Offices and Jurisdictions"
 date: 2026-10-14 08:00:00 +0100
+description: "See how attribute-based access control adds user, resource, action, and environmental context to authorization in enterprise systems."
 categories:
   - Backend Engineering
   - Security

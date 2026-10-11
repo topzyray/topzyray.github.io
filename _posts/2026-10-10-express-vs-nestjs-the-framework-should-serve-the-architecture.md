@@ -1,6 +1,7 @@
 ---
 title: "Express vs NestJS: The Framework Should Serve the Architecture"
 date: 2026-10-10 08:00:00 +0100
+description: "Compare Express and NestJS through architecture, constraints, and team needs to choose a framework that fits the system."
 categories:
   - Backend Engineering
   - Node.js

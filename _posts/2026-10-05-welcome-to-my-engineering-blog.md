@@ -1,6 +1,7 @@
 ---
 title: "Welcome to My Engineering Blog"
 date: 2026-10-05 19:00:00 +0100
+description: "An introduction to this engineering blog and its focus on backend systems, software architecture, and lessons from building software."
 categories:
   - Engineering
   - Personal

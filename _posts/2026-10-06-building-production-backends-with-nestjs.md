@@ -1,6 +1,7 @@
 ---
 title: "Building Production Backends with NestJS"
 date: 2026-10-06 09:00:00 +0100
+description: "Explore how feature-oriented modules and clear dependency boundaries help make NestJS backends easier to maintain as they grow."
 categories:
   - Backend
   - Architecture

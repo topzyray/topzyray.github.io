@@ -1,6 +1,7 @@
 ---
 title: "Designing Backends So Infrastructure Can Change Without Rewriting Business Logic"
 date: 2026-10-08 08:00:00 +0100
+description: "Learn how dependency inversion and clear boundaries let backend infrastructure evolve without coupling business logic to specific providers."
 categories:
   - Backend Engineering
   - Architecture

@@ -1,6 +1,7 @@
 ---
 title: "Designing Audit Trails for Systems That Matter"
 date: 2026-10-15 08:00:00 +0100
+description: "Design audit trails that record who did what, when, and to which resource, supporting accountability in business-critical systems."
 categories:
   - Backend Engineering
   - Enterprise Systems

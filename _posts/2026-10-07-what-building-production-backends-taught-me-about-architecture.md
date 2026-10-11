@@ -1,6 +1,7 @@
 ---
 title: "What Building Production Backends Taught Me About Architecture"
 date: 2026-10-07 08:00:00 +0100
+description: "Lessons from production backend work on structuring applications so their business capabilities remain understandable and changeable."
 categories:
   - Backend Engineering
   - Architecture

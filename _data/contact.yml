@@ -6,10 +6,12 @@
 - type: github
   icon: "fab fa-github"
   noblank: true
+  # url: "https://github.com"
 
 - type: linkedin
   icon: "fab fa-linkedin"
   noblank: true
+  url: "https://www.linkedin.com/in/taiwotopesunday"
 
 - type: email
   icon: "fas fa-envelope"

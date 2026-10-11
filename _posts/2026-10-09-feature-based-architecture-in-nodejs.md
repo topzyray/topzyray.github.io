@@ -1,6 +1,7 @@
 ---
 title: "Feature-Based Architecture in Node.js"
 date: 2026-10-09 08:00:00 +0100
+description: "Compare feature-based and layer-based Node.js project structures, and see how organizing code by business capability supports growth."
 categories:
   - Backend Engineering
   - Architecture
