@@ -20,7 +20,7 @@ The more I work on real systems, the more I realize that the framework is only o
 
 The harder problem is deciding **how the system should be structured so that it remains understandable and changeable as it grows**.
 
-That lesson has become particularly clear while working on the Nigeria Immigration Service Store Management Information System and while designing other Node.js backend systems.
+That lesson has become particularly clear while working on the NIS Store Management Information System and while designing other Node.js backend systems.
 
 ## The application is larger than its HTTP API
 
