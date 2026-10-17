@@ -284,7 +284,7 @@ Headquarters
     │      └── Sections / Units
     │
     ├── Zones
-    │      └── State Commands
+    │      └── State Offices
     │             └── Operational Offices
     │
     └── Other organizational structures

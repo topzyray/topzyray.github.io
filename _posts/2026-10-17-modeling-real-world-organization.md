@@ -43,7 +43,7 @@ Does it describe the kind of office, its position in the organizational hierarch
 
 Those concepts are related, but they are not interchangeable.
 
-For example, a state command and a directorate may represent different organizational types. A headquarters office and a local office may occupy different levels of a hierarchy. An office may operate within a particular geographical jurisdiction, while an outpost may have a separate operational classification.
+For example, a state office and a directorate may represent different organizational types. A headquarters office and a local office may occupy different levels of a hierarchy. An office may operate within a particular geographical jurisdiction, while an outpost may have a separate operational classification.
 
 If all these distinctions are compressed into one field, the application eventually has to recover the missing meaning through naming conventions, conditional statements, or assumptions scattered across the codebase.
 
@@ -91,8 +91,8 @@ In TypeScript, the model might begin with explicit types:
 type OfficeType =
   | "HEADQUARTERS"
   | "DIRECTORATE"
-  | "ZONE"
-  | "STATE_COMMAND"
+  | "ZONAL_OFFICE"
+  | "STATE_OFFICE"
   | "OUTPOST";
 
 type OfficeStatus = "ACTIVE" | "INACTIVE";
@@ -150,7 +150,7 @@ Organizational hierarchy can then be represented separately:
 ```text
 Headquarters
  └── Zone
-      └── State Command
+      └── State Office
            └── Local Area Office
                 └── Outpost
 ```
@@ -182,7 +182,7 @@ Another consequence of this approach is that the domain model should not be desi
 A database may use foreign keys and normalized tables to represent organizational relationships. An API may expose nested objects or flattened fields for convenient consumption. A frontend may display a breadcrumb such as:
 
 ```text
-Headquarters / Zone / State Command / Outpost
+Headquarters / Zonal Office / State Office / Outpost
 ```
 
 These are different representations of the same underlying concepts.

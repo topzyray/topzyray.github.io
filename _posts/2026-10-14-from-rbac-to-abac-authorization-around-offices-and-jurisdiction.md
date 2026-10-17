@@ -55,11 +55,11 @@ The NIS-related systems I have been designing contain organizational structures 
 - headquarters;
 - directorates;
 - sections and units;
-- zones;
-- state commands;
-- border-related offices;
+- zonal offices;
+- state offices;
+- outpost offices;
 - training institutions;
-- foreign missions.
+- foreign liaising offices.
 
 A user can therefore have a role and still need to be restricted by organizational scope.
 
@@ -76,7 +76,7 @@ Headquarters
    │      └── Section
    │
    └── Zone
-          └── State Command
+          └── State Offices
                  └── Local Government Office
 ```
 
