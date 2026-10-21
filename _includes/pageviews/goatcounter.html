@@ -1,0 +1,25 @@
+<!-- Display GoatCounter pageviews -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const pageviews = document.getElementById('pageviews');
+    if (!pageviews) return;
+
+    const path = window.location.pathname.replace(/\/$/, '');
+    const endpoint = `https://{{ site.analytics.goatcounter.id }}.goatcounter.com/counter/${encodeURIComponent(path)}.json`;
+
+    fetch(endpoint)
+      .then((response) => {
+        if (!response.ok) throw new Error(`GoatCounter returned ${response.status}`);
+        return response.json();
+      })
+      .then((data) => {
+        const count = Number.parseInt(String(data.count).replace(/\D/g, ''), 10);
+        if (!Number.isFinite(count)) throw new Error('GoatCounter returned an invalid count');
+        pageviews.textContent = new Intl.NumberFormat().format(count);
+      })
+      .catch((error) => {
+        console.error('Unable to load GoatCounter pageviews:', error);
+        pageviews.textContent = '—';
+      });
+  });
+</script>
