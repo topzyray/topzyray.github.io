@@ -14,8 +14,8 @@ description: "Tope Taiwo’s résumé: fullstack software engineer with 4+ years
       <p>Production-grade web, mobile, and cloud-native applications · Scalable APIs · Distributed systems</p>
     </div>
     <div class="resume-actions">
-      <a class="btn btn-primary" href="mailto:{{ site.social.email }}?subject=Hiring%20inquiry%20%E2%80%94%20Tope%20Taiwo">Hire Me</a>
-      <a class="btn btn-outline-primary resume-download" href="{{ '/assets/files/tope-taiwo-resume.pdf' | relative_url }}" download>
+      <a class="btn btn-info" href="mailto:{{ site.social.email }}?subject=Hiring%20inquiry%20%E2%80%94%20Tope%20Taiwo">Hire Me</a>
+      <a class="btn btn-outline-info resume-download" href="{{ '/assets/files/tope-taiwo-resume.pdf' | relative_url }}" download>
         <i class="fas fa-download" aria-hidden="true"></i> Download PDF
       </a>
     </div>
