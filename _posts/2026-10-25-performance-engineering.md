@@ -26,9 +26,7 @@ Use streams.
 
 These can all be useful.
 
-But none of them should be the first step.
-
-The first step should be measurement.
+But before choosing an optimization, measure the behavior you want to improve.
 
 Without measurement, we risk solving the wrong problem, introducing unnecessary complexity, or optimizing a component that contributes very little to the overall performance of the system.
 
@@ -45,6 +43,8 @@ Suppose we believe an implementation is faster.
 That is an assumption.
 
 A benchmark gives us evidence.
+
+Here, a benchmark means a repeatable measurement of a defined workload, not necessarily a full load, stress, or soak test.
 
 A useful benchmark should define:
 
@@ -86,13 +86,13 @@ These measurements answer different questions.
 
 A system can have high throughput while individual requests experience unacceptable delays. It can also have low average latency while a small but important percentage of requests take several seconds to complete.
 
-That is why latency percentiles matter.
+That is why latency percentiles matter: they can expose slow requests that averages conceal, as described in the [Google SRE Workbook’s monitoring guidance](https://sre.google/workbook/monitoring/).
 
 Consider these common metrics:
 
 - **p50:** The median request latency.
-- **p95:** The latency at or below which approximately 95% of measured requests complete.
-- **p99:** The latency at or below which approximately 99% of measured requests complete.
+- **p95:** The latency at or below which approximately 95% of requests in the measured sample complete.
+- **p99:** The latency at or below which approximately 99% of requests in the measured sample complete.
 
 The p95 and p99 measurements can reveal slow requests that an average may conceal. They are particularly useful when a system has variable workloads, external dependencies, or occasional resource contention.
 
@@ -173,7 +173,7 @@ If we focus only on the application code, we may miss the operation consuming mo
 
 For example, an endpoint that retrieves a list of requisitions might execute a separate query for every requisition to retrieve its items. As the number of requisitions grows, the number of database queries grows with it.
 
-This is a common form of the N+1 query problem.
+This is a common form of the [N+1 query problem](https://www.prisma.io/docs/orm/v7/prisma-client/queries/advanced/query-optimization-performance#solving-the-n1-problem): one query retrieves the parent records, then an additional query runs for each record to retrieve its related items.
 
 Adding more Node.js workers will not necessarily solve it. In some cases, it may increase database contention by allowing more concurrent queries to reach an already overloaded database.
 
@@ -187,7 +187,7 @@ A better investigation would examine:
 - connection-pool utilization;
 - transaction duration and lock contention.
 
-Tools such as PostgreSQL's `EXPLAIN ANALYZE` can help identify expensive query operations and show how a query actually executes. However, it executes the statement being analyzed, so it should be used carefully with statements that modify data.
+PostgreSQL's [`EXPLAIN ANALYZE`](https://www.postgresql.org/docs/current/sql-explain.html) executes the statement and reports actual runtime statistics alongside the query plan. Use care with statements that modify data, since their side effects occur.
 
 The important point is that database performance should be measured at the database boundary, not inferred from API response time alone.
 
@@ -197,7 +197,7 @@ When the database is not the bottleneck, we need to investigate the Node.js runt
 
 Node.js is well suited to I/O-heavy workloads, but that does not mean every Node.js application is automatically fast.
 
-CPU-intensive JavaScript can block the event loop. Large synchronous operations can delay unrelated requests. Excessive object creation can increase garbage-collection activity. Unbounded concurrency can overwhelm downstream services.
+CPU-intensive JavaScript can block the event loop. As the [Node.js event-loop guidance](https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop) explains, long-running callbacks can reduce throughput and delay other clients. Large synchronous operations can delay unrelated requests. Excessive object creation can increase garbage-collection activity. Unbounded concurrency can overwhelm downstream services.
 
 The appropriate response depends on the evidence.
 
@@ -208,7 +208,7 @@ For example:
 - If memory usage grows continuously, investigate retained objects, unbounded collections, and resource cleanup.
 - If latency increases sharply under concurrency, examine resource contention, connection limits, queueing, and downstream saturation.
 
-Node.js provides useful diagnostic capabilities, including CPU profiling, heap snapshots, and event-loop monitoring. These can help narrow down the cause of performance problems instead of relying on guesswork.
+Node.js provides diagnostic capabilities such as CPU profiling and heap snapshots. The [Node.js diagnostics guide](https://nodejs.org/en/learn/diagnostics/diagnostics-landing-page) describes tools that can help narrow down performance problems instead of relying on guesswork.
 
 Profiling should generally be performed under a workload that reproduces the behavior being investigated. A CPU profile collected while the application is idle will not explain a CPU bottleneck that appears only under heavy traffic.
 
@@ -222,7 +222,7 @@ Caching may reduce repeated database reads. An index may improve query execution
 
 But each technique solves a different problem.
 
-Caching introduces invalidation and consistency concerns. Indexes consume storage and add overhead to writes. Queues introduce delivery, retry, and idempotency considerations. Streams require correct backpressure handling. Worker threads introduce communication and lifecycle overhead.
+Caching introduces invalidation and consistency concerns. Indexes consume storage and add overhead to writes, even as they can speed up retrieval ([PostgreSQL documentation](https://www.postgresql.org/docs/current/indexes.html)). Queues introduce delivery, retry, and idempotency considerations. Streams require correct backpressure handling. Worker threads introduce communication and lifecycle overhead.
 
 Even clustering is not a universal solution. It can improve the use of multiple CPU cores for suitable workloads, but it does not automatically fix slow queries, inefficient algorithms, or overloaded external dependencies.
 
