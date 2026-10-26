@@ -5,6 +5,11 @@
 
 .home-actions {
   gap: 0.5rem;
+
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 0.55rem;
 }
 
 .resume-page {

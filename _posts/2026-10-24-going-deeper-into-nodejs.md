@@ -26,7 +26,7 @@ A framework can help organize an application, enforce architectural boundaries, 
 
 When an application becomes slow, memory consumption increases, requests begin timing out, or background work interferes with API responsiveness, the explanation may have little to do with the framework itself.
 
-It may be a consequence of how Node.js executes JavaScript, manages asynchronous operations, handles data, or uses system resources.
+It may be a consequence of [Node.js](https://nodejs.org) executes JavaScript, manages asynchronous operations, handles data, or uses system resources.
 
 That is why I consider runtime knowledge an important part of backend engineering.
 
@@ -40,7 +40,7 @@ await service.execute();
 
 there is a substantial amount happening underneath.
 
-Node.js manages:
+[Node.js](https://nodejs.org) manages:
 
 - JavaScript execution.
 - Asynchronous operations.
@@ -66,7 +66,7 @@ Framework abstractions simplify development. They do not remove the need to unde
 
 ## Why the event loop matters
 
-Node.js is designed around asynchronous I/O.
+[Node.js](https://nodejs.org) is designed around asynchronous I/O.
 
 That makes it effective for many backend workloads, particularly applications that spend substantial time waiting for databases, network responses, files, and other external resources.
 
@@ -98,7 +98,7 @@ return permissions;
 
 If the repository and permission service perform asynchronous I/O, the JavaScript execution can yield while those operations are pending.
 
-This allows Node.js to make progress on other work rather than blocking the main thread while waiting for each response.
+This allows [Node.js](https://nodejs.org) to make progress on other work rather than blocking the main thread while waiting for each response.
 
 However, `await` does not move the underlying computation to another thread automatically.
 
@@ -120,11 +120,11 @@ It is what the function actually does and where that work executes.
 
 ## Understanding the event loop beyond `async` and `await`
 
-The event loop is central to how Node.js coordinates JavaScript execution and asynchronous operations.
+The [event loop](https://nodejs.org/learn/asynchronous-work/event-loop-timers-and-nexttick) is central to how [Node.js](https://nodejs.org) coordinates JavaScript execution and asynchronous operations.
 
 At a high level, the runtime executes JavaScript callbacks and processes scheduled work as the relevant operations become ready.
 
-Node.js uses the event loop and underlying mechanisms such as libuv to coordinate I/O, timers, and other asynchronous activity.
+[Node.js](https://nodejs.org) uses the event loop and underlying mechanisms such as libuv to coordinate I/O, timers, and other asynchronous activity.
 
 Promises and `async`/`await` also involve microtask scheduling, which affects the order in which callbacks execute.
 
@@ -169,7 +169,7 @@ Concurrency means multiple operations can make progress over overlapping periods
 
 Parallelism means multiple operations execute at the same time.
 
-Node.js can handle many concurrent I/O operations without requiring a separate JavaScript thread for each request.
+[Node.js](https://nodejs.org) can handle many concurrent I/O operations without requiring a separate JavaScript thread for each request.
 
 For example:
 
@@ -220,7 +220,7 @@ Second, split work into manageable units where doing so is practical.
 
 Third, use worker threads when CPU-intensive JavaScript can benefit from execution on another thread.
 
-For example, Node.js provides the `worker_threads` module for running JavaScript in parallel across threads.
+For example, [Node.js](https://nodejs.org/api/worker_threads.html) provides the [`worker_threads`](https://nodejs.org/api/worker_threads.html) module for running JavaScript in parallel across threads.
 
 ```ts
 import { Worker } from "node:worker_threads";
@@ -279,7 +279,7 @@ CSV Formatter
 HTTP Response or File
 ```
 
-Node.js streams support this kind of processing.
+[Node.js streams](https://nodejs.org/api/stream.html) support this kind of processing.
 
 However, streams do not automatically make every pipeline memory-safe. The source must also avoid buffering the entire dataset, and the pipeline must handle backpressure correctly.
 
@@ -287,7 +287,7 @@ Backpressure allows a slower downstream consumer to influence how quickly upstre
 
 Without appropriate backpressure handling, a fast producer can overwhelm a slower consumer and accumulate data in memory.
 
-For stream pipelines, Node.js provides utilities such as `pipeline` from `node:stream/promises`, which help coordinate stream completion and error propagation.
+For stream pipelines, [Node.js](https://nodejs.org) provides utilities such as `pipeline` from `node:stream/promises`, which help coordinate stream completion and error propagation.
 
 For large imports and exports, I also consider batching, database cursor behavior, cancellation, and what happens when the destination disconnects or fails.
 
@@ -428,7 +428,7 @@ Useful measurements include:
 - Stream throughput and buffering.
 - Background-job processing time and queue depth.
 
-Node.js provides diagnostic and profiling capabilities, including performance hooks, CPU profiling, heap snapshots, and event-loop monitoring.
+[Node.js](https://nodejs.org) provides diagnostic and profiling capabilities, including performance hooks, CPU profiling, heap snapshots, and event-loop monitoring.
 
 The right tool depends on the symptom being investigated.
 
