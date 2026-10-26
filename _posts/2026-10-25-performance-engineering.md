@@ -208,7 +208,7 @@ For example:
 - If memory usage grows continuously, investigate retained objects, unbounded collections, and resource cleanup.
 - If latency increases sharply under concurrency, examine resource contention, connection limits, queueing, and downstream saturation.
 
-Node.js provides diagnostic capabilities such as CPU profiling and heap snapshots. The [Node.js diagnostics guide](https://nodejs.org/en/learn/diagnostics/diagnostics-landing-page) describes tools that can help narrow down performance problems instead of relying on guesswork.
+Node.js provides diagnostic capabilities such as CPU profiling and heap snapshots. The [Node.js diagnostics guide](https://nodejs.org/learn/getting-started/profiling) describes tools that can help narrow down performance problems instead of relying on guesswork.
 
 Profiling should generally be performed under a workload that reproduces the behavior being investigated. A CPU profile collected while the application is idle will not explain a CPU bottleneck that appears only under heavy traffic.
 
