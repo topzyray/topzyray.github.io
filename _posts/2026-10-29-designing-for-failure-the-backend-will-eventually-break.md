@@ -74,7 +74,7 @@ A better design tracks progress and makes the operation safe to resume.
 
 For example, a batch-processing workflow might look like this:
 
-```text id="w7fx4m"
+```text
 Import Job
     │
     ▼
@@ -128,7 +128,7 @@ A retry is not automatically safe.
 
 Consider:
 
-```text id="r7ypce"
+```text
 Create payment
    ↓
 Timeout
@@ -183,7 +183,7 @@ This is particularly important when a database transaction succeeds but publishi
 
 For each external dependency, I increasingly want to ask:
 
-```text id="6s1p4d"
+```text
 What happens if it is slow?
 What happens if it is unavailable?
 What happens if it returns an error?
