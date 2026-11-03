@@ -1,22 +1,17 @@
-# November 4, 2026
-
 ---
-
 title: "Managing Database Connections in a NestJS Application"
 date: 2026-11-04 06:00:00 +0100
 description: "Explore database connection lifecycle management in NestJS, including connection pools, dependency injection, graceful shutdown, and transaction boundaries."
 categories:
-
-- Backend Engineering
-- NestJS
-  tags:
-- nestjs
-- nodejs
-- typescript
-- postgresql
-- connection-pooling
-- database
-
+  - Backend Engineering
+  - NestJS
+tags:
+  - nestjs
+  - nodejs
+  - typescript
+  - postgresql
+  - connection-pooling
+  - database
 ---
 
 A backend application does not communicate with PostgreSQL simply because a database client has been imported.
